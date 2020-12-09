@@ -1,0 +1,460 @@
+body {
+    background-color: black;
+    margin: 0%;
+}
+
+/* ------------------BARRA DE NAVEGACIÓN-------------------- */
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(0, 0, 0);
+    
+    overflow: hidden;
+    
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    /* al poner position -websticky o como sea, no me funciona bien*/
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: 0.2s;
+    border-radius: 3px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    
+    color: rgb(57, 255, 255);
+  }
+  
+  /* ESTILO DIFERENTE PARA EL ACTIVO EN LA NAV BAR DESACTIVADO
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }   */
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+/* ---------------FIN DE BARRA DE NAVEGACIÓN-------------------- */
+
+#hero {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(51, 51, 51));
+    height: 500px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+h1 {
+    display: inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: auto;
+    font-size: 3.4rem;
+    color: rgb(247, 247, 247);
+    border-bottom: solid;
+    transition: 0.4s;
+    cursor: auto;
+    
+}
+h1:hover {
+  color: aquamarine;
+  
+}
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    
+}
+
+.padre {
+    
+    margin-top: 10%;
+    display: inline-block;
+    /*background: rgb(0, 0, 0); */
+    
+}
+
+#divisorfade {
+  background-image: linear-gradient(to right, rgb(174, 0, 255), rgb(255, 153, 0));
+  height: 4px;
+  margin: 0%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 100px;
+  font-family: 'Roboto Condensed', sans-serif;
+  grid-gap: 20px;
+  color: white;
+  padding: 15px;
+  max-width: 95%;
+  margin: auto;
+  
+}
+
+.grid-container > div {
+  background-color: rgba(48, 48, 48, 0.8);
+  
+  text-align: center;
+  font-size: 30px;
+}
+
+p {
+  margin: 10px;
+}
+
+
+/* CAMBIO DE TAMAÑOS DE GRID EN MOVIL */
+@media screen and (max-width: 600px) {
+  .grid-container {grid-template-columns: 100%;
+  grid-template-rows: auto;}
+  .grid-container2 {grid-template-columns: 100%;
+    grid-template-rows: auto;}
+  #hero {height: 400px;}
+}
+/* CAMBIO DE TAMAÑOS DE GRID EN MOVIL */
+
+
+
+
+
+
+#ads {
+  background-color: rgb(0, 0, 0);
+  height: 650px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, black, rgb(63, 63, 63));
+}
+
+
+.imagen {
+  color: white;
+  
+}
+
+#roas {
+  color: rgb(255, 255, 255);
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  border-bottom-style: solid;
+  border-color: white;
+  padding: 1%;
+  font-size: 4rem;
+  display: inline-block;
+}
+
+
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 100px;
+  font-family: 'Roboto Condensed', sans-serif;
+  grid-gap: 20px;
+  
+  color: white;
+  padding: 15px;
+  max-width: 95%;
+  margin: auto;
+}
+
+
+
+h2 {
+  letter-spacing: 7px;
+  transition: 0.6s;
+}
+
+h2:hover {
+  cursor: pointer;
+  color: rgb(42, 255, 156);
+}
+
+
+
+#pie {
+  background-color: black;
+  color: white;
+  height: auto;
+  text-align: center;
+  width: auto;
+}
+
+#ie {    /*estilo de p="ie"*/
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.4rem;
+}
+
+
+/* GRID DE IMAGENES RESPONSIVE */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 10%;
+  max-width: 95%;
+  padding: 0 4px;
+  
+
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 750px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* FIN GRID DE IMAGENES RESPONSIVE */
+
+
+#galeria {
+  background-image: linear-gradient(to bottom,rgb(63, 63, 63), #1d1d1d);
+  
+}
+
+#sobrenosotros {
+  background-color: #1d1d1d;
+  height: auto;
+  text-align: center;
+}
+
+
+#dondestamos {
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 7px;
+  margin-top: 5%;
+  border-bottom-style: solid;
+  border-color: white;
+  border-width: 2px;
+  display: inline-block;
+  
+}
+
+/* aquí hago responsive el mapa */
+.mapa {
+  visibility: visible; /* mapa grande visible */
+  margin-top: 20px;}   
+.mapamovil { 
+  visibility: hidden;  /* mapa mas pequeño oculto */
+  margin-top: 10px; 
+}
+@media screen and (max-width: 800px) {  /* cuando el ancho llegue a 800 */
+  .mapa {  /* mapa grande se oculta y se le pone height pequeño para que el mapa pequeño no se quede muy espaciado */
+    visibility: hidden; /* se oculta al llegar a 800px */
+    height: 10px;  /* disminuyo height para que el mapa pequeño no se quede muy espaciado de arriba */
+  }
+  .mapamovil {
+    visibility: visible;   /* mapa pequeño se vuelve visible */
+  }
+}
+
+#asos {
+  size: 100px;
+  border-radius: 200%;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  margin-top: 2%;
+}
+
+#reviews {
+  background-image: linear-gradient(to right, rgb(174, 0, 255), rgb(255, 153, 0));
+  height: auto;
+  margin-top: 0%;
+}
+
+.grid-container3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 100%;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  grid-gap: 20px;
+  color: white;
+  padding: 15px;
+  max-width: 95%;
+  margin: auto;
+  
+  
+}
+
+#insta {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+@media screen and (max-width: 700px) {  /* cuando el ancho llegue a 700 */
+  #s-text { 
+    font-size: 2rem;
+  }
+  .grid-container3 {
+    grid-template-columns: 100%;
+  }
+}
+
+
+svg {
+    display: block;
+    font-family: 'Montserrat';
+    
+    width: 700px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #ffffff;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #c9c9c9;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #9e9e9e;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #666666;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #272727;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+
+
+
+
+
+/*BANNERS DE COLORES Y TEXTO*/
+#textocolores {
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 1.9rem;
+  padding-left: 2%;
+  padding-top: 1%;
+}
+
+
+#titulocolores {
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  
+  padding-left: 2%;
+  padding-top: 1%;
+}
+
+#hhero {
+    padding: 10%;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 5rem;
+}
+
+h3 {
+    text-align: center;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#pfooter {
+  color: white;
+  font-family: 'Montserrat';
+  display: block;
+  font-size: 1rem;
+}
